@@ -33,7 +33,7 @@ import com.cyanogenmod.settings.device.R;
 public class HapticFragmentActivity extends PreferenceFragment {
 
     private static final String PREF_ENABLED = "1";
-    private static final String TAG = "GalaxyS3Parts_Haptic";
+    private static final String TAG = "GalaxyS4Parts_Haptic";
     public static final String KEY_VIBRATOR_TUNING = "vibrator_tuning";
 
     private static boolean sVibratorTuning;

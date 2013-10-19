@@ -43,7 +43,7 @@ import java.text.DecimalFormat;
  * Special preference type that allows configuration of vibrator intensity settings on Samsung devices
  */
 public class VibratorTuningPreference extends DialogPreference implements SeekBar.OnSeekBarChangeListener {
-    private static final String TAG = "GalaxyS3Settings_Vibrator";
+    private static final String TAG = "GalaxyS4Settings_Vibrator";
 
     private static String FILE_PATH = null;
     private static int MAX_VALUE;
