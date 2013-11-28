@@ -33,9 +33,6 @@ TARGET_GLOBAL_CFLAGS += -mfpu=neon-vfpv4 -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mfpu=neon-vfpv4 -mfloat-abi=softfp
 TARGET_CPU_VARIANT := krait
 
-# Adreno configuration
-BOARD_EGL_CFG := device/samsung/msm8960-common/configs/egl.cfg
-
 # Wifi related defines
 WIFI_BAND := 802_11_ABG
 WPA_SUPPLICANT_VERSION := VER_0_8_X
@@ -84,6 +81,9 @@ TARGET_USES_QCOM_COMPRESSED_AUDIO := true
 # QCOM enhanced A/V
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 
+# QCOM BSP Enabled
+TARGET_USES_QCOM_BSP := true
+
 # Kernel time optimization
 # temp remove - causing issues with short/long presses
 # KERNEL_HAS_GETTIMEOFDAY_HELPER := true
@@ -96,3 +96,30 @@ TARGET_QCOM_MEDIA_VARIANT := caf
 
 # Use retire fence from MDP driver
 TARGET_DISPLAY_USE_RETIRE_FENCE := true
+
+# SELinux
+BOARD_SEPOLICY_DIRS += \
+        device/samsung/msm8960-common/sepolicy
+
+BOARD_SEPOLICY_UNION += \
+        file_contexts \
+        app.te \
+        bluetooth.te \
+        device.te \
+        domain.te \
+        drmserver.te \
+        file.te \
+        hci_init.te \
+        healthd.te \
+        init.te \
+        init_shell.te \
+        keystore.te \
+        kickstart.te \
+        mediaserver.te \
+        nfc.te \
+        rild.te \
+        surfaceflinger.te \
+        system.te \
+        ueventd.te \
+        wpa.te \
+        wpa_socket.te
