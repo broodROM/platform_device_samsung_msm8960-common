@@ -15,7 +15,7 @@
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Device audio defines "Voice Earpiece Extra Gain" mode. -->
-    <bool name="config_hasVocEpXgain">false</bool>
+    <bool name="config_hasVocEpXgain">true</bool>
 
     <!-- Vibrator Tuning -->
     <bool name="has_vibrator_tuning">true</bool>
