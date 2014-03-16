@@ -50,11 +50,13 @@ public class DeviceSettings extends FragmentActivity {
     public static final String KEY_VIBRATOR_INTENSITY = "vibrator_intensity";
     public static final String KEY_PANEL_COLOR_TEMPERATURE = "panel_color_temperature";
     public static final String KEY_CABC = "cabc";
+    public static final String KEY_FASTCHARGE = "fast_charging";
 
     public static final String CATEGORY_MDNIE = "mdnie";
     public static final String CATEGORY_SENSORS = "sensors";
     public static final String CATEGORY_TOUCHSCREEN = "touchscreen";
     public static final String CATEGORY_TOUCHKEY = "touchkey";
+    public static final String CATEGORY_FASTCHARGE = "fastcharge";
     public static final String KEY_USE_DOCK_AUDIO = "dock_audio";
 
     ViewPager mViewPager;
@@ -83,6 +85,8 @@ public class DeviceSettings extends FragmentActivity {
                 HapticFragmentActivity.class, null);
         mTabsAdapter.addTab(bar.newTab().setText(R.string.category_sound_title),
                 SoundFragmentActivity.class, null);
+        mTabsAdapter.addTab(bar.newTab().setText("Fast Charging"),
+                FastChargeFragmentActivity.class, null);
         if (savedInstanceState != null) {
             bar.setSelectedNavigationItem(savedInstanceState.getInt("tab", 0));
         }

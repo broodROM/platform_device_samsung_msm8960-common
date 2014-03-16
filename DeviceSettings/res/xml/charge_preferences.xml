@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+            android:key="fastcharge"
+            android:title="Fast charging settings">
+
+        <CheckBoxPreference
+                android:key="fast_charging"
+                android:title="Fast Charging"
+                android:summary="Enable or disable forced fast charging"
+                android:defaultValue="false" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
